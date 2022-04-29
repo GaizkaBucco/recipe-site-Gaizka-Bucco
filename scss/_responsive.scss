@@ -1,0 +1,22 @@
+@media (min-width: 800px) {
+	.recipe-body {
+		display: flex;
+		.img-container {
+			display: block;
+			width: 100%;
+			img {
+				width: 95%;
+			}
+		}
+		.recipe-information {
+			margin: auto;
+		}
+	}
+}
+
+@media (min-width: 1500px) {
+	.card {
+		max-width: 1400px;
+		margin: 0.5em auto;
+	}
+}

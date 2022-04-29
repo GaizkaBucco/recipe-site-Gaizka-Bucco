@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+nav .logo {
+  font-size: 2.5em;
+}
+nav li {
+  list-style-type: none;
+}
+nav li a, nav li a.active {
+  text-decoration: none;
+}
+nav li a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+nav li a.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.btn, .btn:hover {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+footer li {
+  list-style-type: none;
+}
+footer li a, footer nav li a.active, nav footer li a.active {
+  text-decoration: none;
+}
+footer li a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+nav {
+  background-color: #a5e1a2;
+  color: #003c09;
+}
+nav a, nav li a.active {
+  color: #003c09;
+}
+
+main {
+  color: #003c09;
+}
+
+.btn, .btn:hover {
+  color: #003c09;
+  background-color: #a5e1a2;
+  border: 1px solid #003c09;
+}
+.btn:hover {
+  color: #a5e1a2;
+  background-color: #003c09;
+  border-color: #a5e1a2;
+  transition: all 0.3s;
+}
+
+footer {
+  background-color: #a5e1a2;
+  color: #003c09;
+}
+footer a, footer nav li a.active, nav li footer a.active {
+  color: #003c09;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "nav" "main" "footer";
+  grid-template-rows: minmax(15vh, auto) minmax(70vh, auto) minmax(15vh, auto);
+}
+body nav {
+  grid-area: nav;
+}
+body main {
+  grid-area: main;
+}
+body footer {
+  grid-area: footer;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .nav-wrapper {
+  padding: 1em;
+}
+nav .nav-wrapper .logo-wrapper {
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+nav .nav-wrapper .nav-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+nav .nav-wrapper .nav-list-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.3;
+}
+nav .nav-wrapper .nav-list-wrapper ul li {
+  padding: 0 0.5em;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .content-container {
+  width: 100%;
+  padding: 1em 0;
+}
+main .content-container h1 {
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  height: 96%;
+  align-items: center;
+}
+.carousel-container .carousel-wrapper {
+  height: fit-content;
+  width: 100%;
+}
+.carousel-container .carousel-wrapper .carousel {
+  max-width: 60vh;
+  position: relative;
+  aspect-ratio: 1/1;
+  display: block;
+  margin: auto;
+}
+.carousel-container .carousel-wrapper .carousel .carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.carousel-container .carousel-wrapper .carousel .carousel-item .arrow {
+  border: solid #a5e1a2;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+  box-shadow: 2px 2px 0 #003c09;
+}
+.carousel-container .carousel-wrapper .carousel .carousel-item .arrow-prev {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+.carousel-container .carousel-wrapper .carousel .carousel-item .arrow-next {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.carousel-container .carousel-wrapper .carousel .item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url("../images/toast.jpg");
+  background-size: cover;
+}
+.carousel-container .carousel-wrapper .carousel .item-2 {
+  background: url("../images/french-toast.jpg");
+  background-size: cover;
+}
+.carousel-container .carousel-wrapper .carousel .item-3 {
+  background: url("../images/grilled.jpg");
+  background-size: cover;
+}
+.carousel-container .carousel-wrapper .carousel #item-1:target ~ .item-1 {
+  opacity: 1;
+}
+.carousel-container .carousel-wrapper .carousel #item-2:target ~ .item-2,
+.carousel-container .carousel-wrapper .carousel #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+[id^=item] {
+  display: none;
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+.card {
+  border: 1px solid #003c09;
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 1em;
+}
+.card h2 {
+  text-align: center;
+}
+.card .img-container {
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+}
+.card .img-container img {
+  width: 50%;
+}
+.card table {
+  border: 1px solid #003c09;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0.5em auto;
+  padding: 0.2em;
+}
+
+.form-container {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+.form-container form .form-item-input {
+  margin-bottom: 1em;
+}
+.form-container form .form-item-input input,
+.form-container form .form-item-input textarea,
+.form-container form .form-item-input select {
+  width: 100%;
+}
+.form-container form .btn {
+  padding: 0.7em 1.5em;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-wrapper {
+  padding: 1em;
+}
+footer .footer-wrapper .footer-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-wrapper .footer-list-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+footer .footer-wrapper .footer-list-wrapper ul li {
+  padding: 0 0.5em 0.5em 0.5em;
+}
+footer .footer-wrapper .footer-cp-wrapper {
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .recipe-body {
+    display: flex;
+  }
+  .recipe-body .img-container {
+    display: block;
+    width: 100%;
+  }
+  .recipe-body .img-container img {
+    width: 95%;
+  }
+  .recipe-body .recipe-information {
+    margin: auto;
+  }
+}
+@media (min-width: 1500px) {
+  .card {
+    max-width: 1400px;
+    margin: 0.5em auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

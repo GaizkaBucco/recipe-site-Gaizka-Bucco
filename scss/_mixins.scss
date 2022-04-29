@@ -1,0 +1,12 @@
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+$form-styles: (
+	width: 60%,
+	text-position: center,
+	margin-style: 0 auto,
+	padding-style: 1em 0,
+);

@@ -1,0 +1,35 @@
+$primary-color: #a5e1a2;
+$accent-color: #003c09;
+
+nav {
+	background-color: $primary-color;
+	color: $accent-color;
+	a {
+		color: $accent-color;
+	}
+}
+
+main {
+	color: $accent-color;
+}
+
+.btn {
+	color: $accent-color;
+	background-color: $primary-color;
+	border: 1px solid $accent-color;
+	&:hover {
+		@extend .btn;
+		color: $primary-color;
+		background-color: $accent-color;
+		border-color: $primary-color;
+		transition: all 0.3s;
+	}
+}
+
+footer {
+	background-color: $primary-color;
+	color: $accent-color;
+	a {
+		color: $accent-color;
+	}
+}
