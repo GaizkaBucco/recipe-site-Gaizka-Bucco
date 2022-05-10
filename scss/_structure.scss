@@ -26,6 +26,9 @@ nav {
 		.logo-wrapper {
 			text-align: center;
 			padding-bottom: 0.5em;
+			.logo-img {
+				height: 40px;
+			}
 		}
 		.nav-list-wrapper {
 			display: flex;
@@ -161,10 +164,10 @@ main {
 
 // forms layout
 .form-container {
-	width: map-get($form-styles, width);
-	text-align: map-get($form-styles, text-position);
-	margin: map-get($form-styles, margin-style);
-	padding: map-get($form-styles, padding-style);
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 1em 0;
 	form {
 		.form-item-input {
 			margin-bottom: 1em;

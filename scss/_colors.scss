@@ -18,7 +18,6 @@ main {
 	background-color: $primary-color;
 	border: 1px solid $accent-color;
 	&:hover {
-		@extend .btn;
 		color: $primary-color;
 		background-color: $accent-color;
 		border-color: $primary-color;

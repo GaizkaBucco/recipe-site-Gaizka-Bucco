@@ -16,7 +16,6 @@ nav {
 			}
 		}
 		a.active {
-			@extend a;
 			font-weight: 600;
 			text-decoration: underline;
 		}

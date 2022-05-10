@@ -13,7 +13,7 @@ nav .logo {
 nav li {
   list-style-type: none;
 }
-nav li a, nav li a.active {
+nav li a {
   text-decoration: none;
 }
 nav li a:hover {
@@ -25,14 +25,14 @@ nav li a.active {
   text-decoration: underline;
 }
 
-.btn, .btn:hover {
+.btn {
   font-family: "Josefin Sans", sans-serif;
 }
 
 footer li {
   list-style-type: none;
 }
-footer li a, footer nav li a.active, nav footer li a.active {
+footer li a {
   text-decoration: none;
 }
 footer li a:hover {
@@ -44,7 +44,7 @@ nav {
   background-color: #a5e1a2;
   color: #003c09;
 }
-nav a, nav li a.active {
+nav a {
   color: #003c09;
 }
 
@@ -52,7 +52,7 @@ main {
   color: #003c09;
 }
 
-.btn, .btn:hover {
+.btn {
   color: #003c09;
   background-color: #a5e1a2;
   border: 1px solid #003c09;
@@ -68,7 +68,7 @@ footer {
   background-color: #a5e1a2;
   color: #003c09;
 }
-footer a, footer nav li a.active, nav li footer a.active {
+footer a {
   color: #003c09;
 }
 
@@ -98,6 +98,9 @@ nav .nav-wrapper {
 nav .nav-wrapper .logo-wrapper {
   text-align: center;
   padding-bottom: 0.5em;
+}
+nav .nav-wrapper .logo-wrapper .logo-img {
+  height: 40px;
 }
 nav .nav-wrapper .nav-list-wrapper {
   display: flex;
