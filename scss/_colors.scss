@@ -14,6 +14,16 @@ main {
 	color: $accent-color;
 }
 
+.modal-opener-btn {
+	border-color: $accent-color;
+	background-color: $primary-color;
+	&:hover {
+		background-color: $accent-color;
+		color: $primary-color;
+		transition: all 0.3s;
+	}
+}
+
 .modal-container {
 	background-color: $modal-container-background;
 }
