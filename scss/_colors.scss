@@ -1,5 +1,6 @@
 $primary-color: #a5e1a2;
 $accent-color: #003c09;
+$modal-container-background: rgba(58, 58, 58, 0.9);
 
 nav {
 	background-color: $primary-color;
@@ -11,6 +12,21 @@ nav {
 
 main {
 	color: $accent-color;
+}
+
+.modal-container {
+	background-color: $modal-container-background;
+}
+
+.close-modal-btn {
+	border: 3px solid $accent-color;
+	background-color: $primary-color;
+	color: $accent-color;
+	&:hover {
+		background-color: $accent-color;
+		color: $primary-color;
+		transition: all 0.3s;
+	}
 }
 
 .btn {
